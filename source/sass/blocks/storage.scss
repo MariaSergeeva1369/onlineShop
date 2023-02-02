@@ -1,0 +1,79 @@
+.storage {
+  position: relative;
+  padding: 20px 45px 14px 0;
+  border-top: 1px solid $color-light-gray;
+  border-bottom: 1px solid $color-light-gray;
+
+  @include vp-767 {
+    padding: 12px 40px 8px 0;
+  }
+}
+
+.storage__runner-text {
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 2px;
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+.storage__runner-text-note {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 15px;
+  color: $color-dim-gray;
+}
+
+.storage__runner {
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 32%;
+    right: 0;
+    width: 40px;
+    height: 14px;
+    background: $color-light-gray;
+    opacity: 0.5;
+    border-radius: 12px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 28%;
+    right: 18px;
+    width: 22px;
+    height: 22px;
+    background: $color-dim-gray;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+
+  @include vp-767 {
+    &::before {
+      top: 30%;
+    }
+
+    &::after {
+      top: 24%;
+    }
+  }
+}
+
+.storage__runner-input[type="checkbox"]:checked + .storage__runner {
+  &::after {
+    top: 28%;
+    right: 0px;
+    background: $color-default-black;
+    transition: 0.3s;
+
+    @include vp-767 {
+      top: 24%;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  padding: 15px 20px;
+  width: 100%;
+  min-height: 51px;
+
+  color: $color-default-white;
+  background-color: $color-default-black;
+  border: none;
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  @include vp-767 {
+    padding: 17px 15px 10px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  &:disabled {
+    background: $color-light-gray;
+    color: $color-dim-gray;
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    background-color: $color-dim-gray;
+    outline: none;
+  }
+}

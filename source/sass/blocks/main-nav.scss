@@ -1,0 +1,127 @@
+.main-nav__toggle {
+  display: none;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 40px;
+  font-size: 14px;
+  line-height: 18px;
+
+  @include vp-1023 {
+    gap: 15px;
+  }
+}
+
+.main-nav__link {
+  @include hover-focus {
+    text-decoration-line: underline;
+    outline: none;
+  }
+}
+
+//Поведение на мобилке
+
+@include vp-767 {
+  .main-nav__toggle {
+    display: block;
+    position: relative;
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    border: none;
+    padding: 0;
+
+    outline: none;
+  }
+
+  //Меню закрыто
+  .main-nav__list--closed .main-nav__list-wrapper {
+    display: none;
+  }
+
+  .main-nav__list--closed .main-nav__toggle {
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1.5px;
+      right: 0;
+      background-color: $color-default-black;
+      transition: 0.3s;
+    }
+
+    &::after {
+      top: 12px;
+      left: 0;
+    }
+
+    &::before {
+      top: 21px;
+      left: 46%;
+    }
+  }
+
+  //Меню открыто
+  .main-nav__list--opened .main-nav__list-wrapper {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    min-width: 320px;
+    z-index: 10;
+  }
+
+  .main-nav__list--opened .main-nav__list {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-default-white;
+    align-items: center;
+    gap: 0;
+    flex-grow: 1;
+    height: 25vh;
+  }
+
+  .main-nav__list--opened .main-nav__item {
+    padding: 10px;
+    border-top: 0.5px solid $color-light-gray;
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-nav__list--opened .main-nav__toggle {
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1.5px;
+      width: 20px;
+      top: 12px;
+      left: 6px;
+      background-color: $color-default-black;
+      transition: 0.3s;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(135deg);
+    }
+  }
+
+  .main-nav__toggle {
+    @include hover-focus {
+      &::after,
+      &::before {
+        background-color: $color-dim-gray;
+      }
+    }
+  }
+}

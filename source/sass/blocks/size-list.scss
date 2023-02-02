@@ -1,0 +1,40 @@
+.size-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 5px;
+
+  @include vp-767 {
+    gap: 9px;
+  }
+}
+
+.size-list__button {
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 6px;
+  width: 30px;
+  height: 30px;
+  background-color: $color-white-smoke;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.size-list__input[type="radio"]:hover + .size-list__button {
+  background-color: $color-light-gray;
+}
+
+.size-list__input[type="radio"]:disabled + .size-list__button {
+  color: $color-light-gray;
+  background-color: $color-white-smoke;
+}
+
+.size-list__input[type="radio"]:checked + .size-list__button {
+  background-color: $color-default-black;
+  color: $color-default-white;
+}

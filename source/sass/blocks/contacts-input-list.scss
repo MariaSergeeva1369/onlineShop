@@ -1,0 +1,15 @@
+.contacts-input-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}

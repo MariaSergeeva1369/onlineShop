@@ -1,0 +1,59 @@
+.color-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 5px;
+
+  @include vp-767 {
+    gap: 16px;
+  }
+}
+
+.color-list__button {
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  border-radius: 50%;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 1px;
+    top: 1px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+
+  &--black::after {
+    background-color: #444444;
+  }
+
+  &--blue::after {
+    background-color: #106da2;
+  }
+
+  &--brown::after {
+    background-color: #ae6d0c;
+  }
+}
+
+.color-list__input[type="radio"]:hover + .color-list__button {
+  border: 1px solid $color-light-gray;
+}
+
+
+.color-list__input[type="radio"]:checked + .color-list__button {
+  border: 1px solid $color-default-black;
+
+  &::after {
+    border: 1px solid $color-default-white;
+  }
+}

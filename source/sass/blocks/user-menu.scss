@@ -1,0 +1,65 @@
+.user-menu__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 20px 30px;
+}
+
+.user-menu__link--chosen {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    right: -35%;
+    top: -50%;
+
+    content: attr(data-setting-quantity);
+    color: $color-default-white;
+    background-color: $color-default-black;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    line-height: 8px;
+    padding: 2px 5px 5px ;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.user-menu__item {
+  height: 20px;
+
+  @include vp-767 {
+    display: none;
+    height: 28px;
+
+    &--cart {
+      display: block;
+    }
+  }
+}
+
+.user-menu__link {
+  outline: none;
+}
+
+.user-menu__link:focus svg {
+  stroke: $color-dim-gray;
+}
+
+.user-menu__link svg {
+  @include vp-767 {
+    width: 28px;
+    height: 28px;
+  }
+
+  stroke: $color-default-black;
+
+  @include hover-focus {
+    stroke: $color-dim-gray;
+  }
+}

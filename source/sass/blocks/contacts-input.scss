@@ -1,0 +1,88 @@
+.contacts-input {
+  position: relative;
+  margin: 0;
+
+  &--medium {
+    grid-column: 1 / -1;
+  }
+}
+
+.contacts-input__input-title {
+  display: none;
+}
+
+.contacts-input__input {
+  padding: 14px 40px 16px 18px;
+  width: 100%;
+  border: 1px solid $color-light-gray;
+  transition: 0.3s;
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 21px;
+    height: 45px;
+    padding: 14px 16px;
+  }
+
+  @include hover-focus {
+    border: 1px solid $color-dim-gray;
+    outline: none;
+    transition: 0.3s;
+  }
+}
+
+.contacts-input__input:hover + .contacts-input__input-title,
+.contacts-input__input:focus + .contacts-input__input-title,
+.contacts-input__input:not(:placeholder-shown) + .contacts-input__input-title {
+  display: inline-block;
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  background-color: $color-default-white;
+  padding: 4px;
+  font-size: 12px;
+  line-height: 15px;
+  color: $color-dim-gray;
+
+  @include vp-767 {
+    top: -12px;
+    left: 11px;
+  }
+}
+
+.contacts-input__label {
+  display: flex;
+}
+
+.contacts-input__label svg {
+  stroke: #000;
+  position: absolute;
+  right: 20px;
+  top: 14px;
+
+  @include vp-767 {
+    top: 39%;
+    right: 16px;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.contacts-input--big .contacts-input__input {
+  min-height: 141px;
+  margin-bottom: 4px;
+
+  @include vp-767 {
+    min-height: 121px;
+    margin-bottom: 8px;
+  }
+}
+
+.contacts-input--medium .contacts-input__input {
+  max-height: 51px;
+
+  @include vp-767 {
+    max-height: none;
+    min-height: 66px;
+  }
+}

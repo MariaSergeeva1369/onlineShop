@@ -1,0 +1,38 @@
+.header {
+  min-width: 320px;
+  border-bottom: 0.5px solid $color-light-gray;
+
+  @include vp-767 {
+    border-bottom: none;
+  }
+}
+
+.header__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  min-height: 72px;
+
+  @include vp-767 {
+    grid-template-columns: auto min-content min-content;
+    gap: 24px;
+  }
+}
+
+.header__nav {
+  @include vp-767 {
+    order: 3;
+  }
+}
+
+.header__logo {
+  justify-self: center;
+
+  @include vp-767 {
+    justify-self: start;
+  }
+}
+
+.header__user-menu {
+  justify-self: end;
+}

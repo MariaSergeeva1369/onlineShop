@@ -1,0 +1,42 @@
+.payment-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.payment-list__item {
+  display: flex;
+  align-items: center;
+}
+
+.payment-list__text {
+  padding-left: 32px;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid $color-dim-gray;
+    border-radius: 50%;
+  }
+}
+
+.payment-list__input[type="radio"]:checked + .payment-list__text::after {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 5px;
+  width: 12px;
+  height: 12px;
+  background-color: $color-default-black;
+  border-radius: 50%;
+}
