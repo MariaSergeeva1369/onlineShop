@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  @include vp-767 {
+    gap: 12px;
+  }
 }
 
 .checkout__agreement {

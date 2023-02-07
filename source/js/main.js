@@ -1,5 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initNav} from './modules/menu';
+import './modules/map';
+import './modules/address-data';
+import {initProdactListHandler, renderProductsInCart} from './modules/product-list';
+import './modules/promocode';
 
 // ---------------------------------
 
@@ -13,6 +17,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
   initNav();
+  initProdactListHandler();
+  renderProductsInCart()
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

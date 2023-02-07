@@ -1,4 +1,4 @@
-.promocode {
+.promocode__wrapper {
   position: relative;
 }
 
@@ -42,14 +42,19 @@
   padding-left: 16px;
   font-size: 12px;
   line-height: 15px;
+  margin-top: 4px;
 }
 
-.promocode__message--valid {
+.promocode:focus-within .promocode__message--valid {
   display: block;
   color: $color-green;
 }
 
-.promocode__message--invalid {
+.promocode:focus-within .promocode__message--invalid {
   display: block;
   color: $color-torch-red;
+}
+
+.promocode:focus-within .promocode__button {
+  display: block;
 }

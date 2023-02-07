@@ -17,30 +17,30 @@
   height: 20px;
   padding: 2px;
   border-radius: 50%;
-  position: relative;
   box-sizing: border-box;
   border: 1px solid transparent;
   cursor: pointer;
+  position: relative;
+}
 
-  &::after {
-    position: absolute;
-    content: "";
-    left: 1px;
-    top: 1px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-  }
+.color-list__marker {
+  position: absolute;
+  content: "";
+  left: 1px;
+  top: 1px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
 
-  &--black::after {
+  &--black {
     background-color: #444444;
   }
 
-  &--blue::after {
+  &--blue {
     background-color: #106da2;
   }
 
-  &--brown::after {
+  &--brown {
     background-color: #ae6d0c;
   }
 }
@@ -52,8 +52,8 @@
 
 .color-list__input[type="radio"]:checked + .color-list__button {
   border: 1px solid $color-default-black;
+}
 
-  &::after {
-    border: 1px solid $color-default-white;
-  }
+.color-list__input[type="radio"]:checked + .color-list__button .color-list__marker {
+  border: 1px solid $color-default-white;
 }
