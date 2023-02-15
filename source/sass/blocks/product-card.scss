@@ -36,7 +36,7 @@
 
 .product-card--deleted .product-card__wrapper {
   background-color: $color-white-smoke;
-  padding: 15px 25px;
+  padding: 16px 25px 12px;
 
   @include vp-767 {
     padding: 16px 8px 9px;
@@ -47,7 +47,7 @@
   display: grid;
   grid-template-columns: 130px auto max-content;
   grid-template-rows: repeat(2, auto);
-  gap: 12px 10px;
+  gap: 13px 10px;
 
   @include vp-1139 {
     grid-template-columns: 130px auto;
@@ -117,7 +117,7 @@
   line-height: 24px;
 
   @include vp-767 {
-    margin: 2px 0 0 0 ;
+    margin: 2px 0 0 0;
     font-size: 14px;
     line-height: 18px;
     padding-right: 30px;

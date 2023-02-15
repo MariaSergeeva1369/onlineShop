@@ -37,14 +37,21 @@
     padding: 0;
 
     outline: none;
+
+    @include hover-focus {
+      &::after,
+      &::before {
+        background-color: $color-dim-gray;
+      }
+    }
   }
 
   //Меню закрыто
-  .main-nav__list--closed .main-nav__list-wrapper {
+  .main-nav--closed .main-nav__list-wrapper {
     display: none;
   }
 
-  .main-nav__list--closed .main-nav__toggle {
+  .main-nav--closed .main-nav__toggle {
     &::after,
     &::before {
       position: absolute;
@@ -67,7 +74,7 @@
   }
 
   //Меню открыто
-  .main-nav__list--opened .main-nav__list-wrapper {
+  .main-nav--opened .main-nav__list-wrapper {
     display: block;
     position: absolute;
     top: 60px;
@@ -77,7 +84,7 @@
     z-index: 10;
   }
 
-  .main-nav__list--opened .main-nav__list {
+  .main-nav--opened .main-nav__list {
     display: flex;
     flex-direction: column;
     background-color: $color-default-white;
@@ -87,14 +94,14 @@
     height: 25vh;
   }
 
-  .main-nav__list--opened .main-nav__item {
+  .main-nav--opened .main-nav__item {
     padding: 10px;
     border-top: 0.5px solid $color-light-gray;
     width: 100%;
     text-align: center;
   }
 
-  .main-nav__list--opened .main-nav__toggle {
+  .main-nav--opened .main-nav__toggle {
     &::after,
     &::before {
       position: absolute;
@@ -113,15 +120,6 @@
 
     &::before {
       transform: rotate(135deg);
-    }
-  }
-
-  .main-nav__toggle {
-    @include hover-focus {
-      &::after,
-      &::before {
-        background-color: $color-dim-gray;
-      }
     }
   }
 }

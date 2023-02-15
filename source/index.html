@@ -15,7 +15,7 @@
     <div class="wrapper">
       <header class="header">
         <div class="header__wrapper container">
-          <nav class="header__nav main-nav main-nav__list--closed">
+          <nav class="header__nav main-nav main-nav--closed">
             <button class="main-nav__toggle">
               <span class="visually-hidden">Открыть меню</span>
             </button>
@@ -76,7 +76,6 @@
       </header>
 
       <main>
-        
         <section class="order">
           <div class="container">
             <div class="breadcrumbs">
@@ -95,11 +94,11 @@
             <div class="order__wrapper">
               <div class="order__intro-wrapper">
                 <h2 class="order__title">Оформление заказа</h2>
-                <p class="oreder__have-account have-account">Есть аккаунт?<a class="have-account__link" href="#">Войти</a></p>
+                <p class="order__have-account have-account">Есть аккаунт?<a class="have-account__link" href="#">Войти</a></p>
               </div>
-  
+
               <div class="order__product-section">
-                <h3 class="order__subtitle"><span class="order__subtitle-text">3 товара</span>&nbsp;на сумму&nbsp;<span class="order__subtitle-price">25 000</span> ₽</h3>
+                <h3 class="order__subtitle"><span class="order__subtitle-text">3 товара</span>&nbsp;на сумму&nbsp;<span class="order__subtitle-price-wrapper"><span class="order__subtitle-price">25 000</span>&nbsp;₽</span></h3>
                 <ul class="order__product-list product-list">
                   <li class="product-list__item product-card">
                     <div class="product-card__product-container">
@@ -188,7 +187,7 @@
                               </ul>
                             </fieldset>
                           </div>
-    
+
                           <div class="product-card__price-section price-section">
                             <div class="price-section__price-container price-section__price-container--with-discount">
                               <p class="price-section__price-wrapper price-section__price-wrapper--old">
@@ -212,19 +211,19 @@
                                 <span class="visually-hidden">Увеличить количество</span>
                               </button>
                             </div>
-                            <div class="price-section__price-container price-section__price-container--with-discount price-section__price-container--counted">
+                            <div class="price-section__price-container price-section__price-container--with-discount">
                               <p class="price-section__price-wrapper price-section__price-wrapper--old">
-                                <span class="price-section__old-price price-section__price--counted-old">24 000</span>
+                                <span class="price-section__old-price">24 000</span>
                                 <span class="price-section__rouble"> ₽</span>
                               </p>
                               <p class="price-section__price-wrapper price-section__price-wrapper--counted">
-                                <span class="price-section__price price-section__price--counted">20 000</span>
+                                <span class="price-section__price">20 000</span>
                                 <span class="price-section__rouble"> ₽</span>
                               </p>
                             </div>
                           </div>
                         </div>
-    
+
                         <button class="product-card__delete-button delete-button">
                           <span class="visually-hidden">Удалить товар из корзины</span>
                         </button>
@@ -232,7 +231,7 @@
                     </div>
 
                   </li>
-  
+
                   <li class="product-list__item product-card product-card--deleted">
                     <div class="product-card__message-container">
                       <div class="product-card__wrapper">
@@ -246,7 +245,7 @@
                       </div>
                     </div>
                   </li>
-  
+
                   <li class="product-list__item product-card">
                     <div class="product-card__product-container">
                       <div class="product-card__wrapper">
@@ -316,7 +315,7 @@
                               </ul>
                             </fieldset>
                           </div>
-    
+
                           <div class="product-card__price-section price-section">
                             <div class="price-section__price-container">
                               <p class="price-section__price-wrapper">
@@ -336,15 +335,15 @@
                                 <span class="visually-hidden">Увеличить количество</span>
                               </button>
                             </div>
-                            <div class="price-section__price-container price-section__price-container--counted">
+                            <div class="price-section__price-container">
                               <p class="price-section__price-wrapper price-section__price-wrapper--counted">
-                                <span class="price-section__price price-section__price--counted">500</span>
+                                <span class="price-section__price">500</span>
                                 <span class="price-section__rouble"> ₽</span>
                               </p>
                             </div>
                           </div>
                         </div>
-    
+
                         <button class="product-card__delete-button delete-button">
                           <span class="visually-hidden">Удалить товар из корзины</span>
                         </button>
@@ -353,57 +352,59 @@
                   </li>
                 </ul>
               </div>
-  
-              <form class="order__form form" id="order-form" action="https://echo.htmlacademy.ru/" method="post" oninput="commentoutput.value=commentcount.value.length">
+
+              <form class="order__form form" id="order-form" action="https://echo.htmlacademy.ru/" method="post" oninput="commentoutput.value=comment.value.length">
                 <div class="form__contacts-section form__section">
                   <h3 class="form__subtitle">Контактные данные</h3>
                   <ul class="form__contacts-input-list contacts-input-list">
                     <li class="contacts-input-list__contacts-item contacts-input">
                       <label class="contacts-input__label">
-                        <input class="contacts-input__input" placeholder="Имя" name="name" value="Александр" type="text" required>
+                        <input class="contacts-input__input" placeholder="Имя" id="name" name="name" value="Александр" type="text" required data-pristine-required-message="Обязательное поле">
                         <span class="contacts-input__input-title">Имя</span>
                       </label>
                     </li>
                     <li class="form__contacts-item contacts-input">
                       <label class="contacts-input__label">
-                        <input class="contacts-input__input" placeholder="Фамилия" name="surname" type="text" required>
+                        <input class="contacts-input__input" placeholder="Фамилия" id="surname" name="surname" type="text" required data-pristine-required-message="Обязательное поле">
                         <span class="contacts-input__input-title">Фамилия</span>
                       </label>
                     </li>
                     <li class="form__contacts-item contacts-input">
                       <label class="contacts-input__label">
-                        <input class="contacts-input__input" placeholder="Телефон" name="phone" type="tel" required>
+                        <input class="contacts-input__input" placeholder="Телефон" id="phone" name="phone" type="tel" required data-pristine-required-message="Обязательное поле">
                         <span class="contacts-input__input-title">Телефон</span>
                       </label>
                     </li>
                     <li class="form__contacts-item contacts-input">
                       <label class="contacts-input__label">
-                        <input class="contacts-input__input" placeholder="Email" name="email" type="email" required>
+                        <input class="contacts-input__input" placeholder="Email" name="email" id="email" type="email" required data-pristine-required-message="Обязательное поле" data-pristine-email-message="Введите валидный email">
                         <span class="contacts-input__input-title">Email</span>
                       </label>
                     </li>
-                    <li class="form__contacts-item contacts-input contacts-input--medium">
-                      <label class="contacts-input__label">
-                        <input class="contacts-input__input contacts-input__input--address" value="г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152" placeholder="Адрес доставки" name="adress" required>
-                        <span class="contacts-input__input-title">Адрес доставки</span>
-                        <svg width="20" height="20" aria-hidden="true" focusable="false">
-                          <use xlink:href="img/sprite.svg#loupe"></use>
-                        </svg>
+                    <li class="form__contacts-item contacts-input contacts-input--medium fild-with-button fild-with-button--big">
+                      <label class="contacts-input__label visually-hidden">
+                        <input class="contacts-input__input contacts-input__input--coordinates" id="coordinates" name="coordinates">
                       </label>
+                      <div class="fild-with-button__wrapper">
+                        <label class="contacts-input__label fild-with-button__label">
+                          <input class="contacts-input__input contacts-input__input--address fild-with-button__input fild-with-button__input--modified" value="г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152" placeholder="Адрес доставки" id="address" name="address" required data-pristine-required-message="Обязательное поле">
+                          <span class="contacts-input__input-title">Адрес доставки</span>
+                          <svg width="20" height="20" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#loupe"></use>
+                          </svg>
+                        </label>
+                        <button class="fild-with-button__button fild-with-button__button--address" type="button">Выбрать на карте</button>
+                      </div>
                     </li>
                   </ul>
                 </div>
-  
+
                 <div class="form__map-section map-container" id="map">
-                  <!-- <picture>
-                    <source media="(min-width:768px)" srcset="../img/map.jpg">
-                    <img src="../img/map-mobile.jpeg" alt="Выберите адрес на карте" width="400" height="450">
-                  </picture> -->
                 </div>
-  
+
                 <div class="form__payment-section form__section">
                   <h3 class="form__subtitle form__subtitle--payment">Оплата</h3>
-                  <fieldset class="product-card__filter-group">
+                  <fieldset class="form__filter-group">
                     <legend class="visually-hidden">Выберите способ оплаты</legend>
                     <ul class="form__payment-list payment-list">
                       <li class="payment-list__item">
@@ -427,12 +428,12 @@
                     </ul>
                   </fieldset>
                 </div>
-  
+
                 <div class="form__comment-section form__section">
                   <h3 class="form__subtitle">Комментарий к заказу</h3>
                   <p class="form__contacts-item contacts-input contacts-input--big">
                     <label class="contacts-input__label">
-                      <textarea class="contacts-input__input" placeholder="Комментарий к заказу" name="commentcount" maxlength="142"></textarea>
+                      <textarea class="contacts-input__input" placeholder="Комментарий к заказу" name="comment" maxlength="142"></textarea>
                       <span class="contacts-input__input-title">Комментарий к заказу</span>
                     </label>
                   </p>
@@ -443,7 +444,7 @@
                   </div>
                 </div>
               </form>
-  
+
               <div class="order__summary summary">
                 <ul class="summary__price-list price-list">
                   <li class="price-list__item">
@@ -484,7 +485,7 @@
                     </p>
                   </li>
                 </ul>
-  
+
                 <div class="summary__storage storage">
                   <label class="storage__runner-wrapper">
                     <span class="storage__runner-text">Получить товар со склада</span>
@@ -493,7 +494,7 @@
                     <span class="storage__runner"></span>
                   </label>
                 </div>
-  
+
                 <ul class="summary__summary-list price-list">
                   <li class="price-list__item price-list__item--summary">
                     <p class="price-list__title">Итого:</p>
@@ -503,25 +504,25 @@
                     </p>
                   </li>
                 </ul>
-  
-                <div class="summary__promocode promocode">
-                  <div class="promocode__wrapper">
-                    <label>
+
+                <div class="summary__promocode promocode fild-with-button">
+                  <div class="fild-with-button__wrapper">
+                    <label class="promocode__label">
                       <span class="visually-hidden">Введите промокод</span>
-                      <input class="promocode__input" placeholder="Введите промокод" name="promocode" type="text" form="order-form">
+                      <input class="fild-with-button__input promocode__input" placeholder="Введите промокод" name="promocode" type="text">
                     </label>
-                    <button class="promocode__button" type="button" form="order-form">Применить</button>
+                    <button class="fild-with-button__button promocode__button" type="button" form="order-form">Применить</button>
                   </div>
-                 
-                  <div class="promocode__message">
-                    <span class="promocode__message-code">1B6D9FC</span>
-                    <span class="promocode__message-text"> - купон применен</span>
+
+                  <div class="fild-with-button__message promocode__message">
+                    <span class="fild-with-button__message-code promocode__message-code">1B6D9FC</span>
+                    <span class="fild-with-button__message-text promocode__message-text"> - купон применен</span>
                   </div>
                 </div>
-  
+
                 <div class="summary__checkout checkout">
                   <button class="checkout__button button" type="submit" form="order-form">Оформить заказ</button>
-                  <p class="checkout__agreement">Нажимая кнопку “Оформить заказ”, Вы соглашаетесь с <a class="checkout__agreement-link" href="#">политикой конфиденциальности.</a></p>
+                  <p class="checkout__agreement agreement">Нажимая кнопку “Оформить заказ”, Вы соглашаетесь с <a class="agreement__link" href="#">политикой конфиденциальности.</a></p>
                 </div>
               </div>
             </div>
@@ -532,27 +533,37 @@
 
       <footer class="footer">
         <div class="footer__wrapper container">
+          <div class="footer__up-button up-button">
+            <button class="up-button__button" type="button">
+              <svg width="12" height="22" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+              <span class="visually-hidden">Наверх</span>
+            </button>
+          </div>
 
           <div class="footer__subscribtion subscribtion">
-            <h2 class="subscribtion__title">Скидка 10% за подписку на наши новости</h2>
-            <form class="subscribtion__subscribtion-form subscribtion-form">
-              <label class="subscribtion-form__input-wrapper">
-                <span class="visually-hidden">Введите email</span>
-                <input class="subscribtion-form__input" placeholder="example@mail.ru" name="subscribtion" type="text">
-              </label>
-              <button class="subscribtion-form__button button--input" type="submit">
-                <svg width="20" height="20" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#loupe"></use>
-                </svg>
-                <span class="button__text">Подписаться</span>
-              </button>
-              <p class="subscribtion-form__agreement agreement">Нажимая кнопку “Подписаться”, Вы соглашаетесь с <a class="agreement__link" href="#">политикой конфиденциальности.</a></p>
+            <h2 class="subscribtion__title">Скидка 10% за подписку на&nbsp;наши&nbsp;новости</h2>
+            <form class="subscribtion__subscribtion-form subscribtion-form" id="subscribtion-form" action="https://echo.htmlacademy.ru/" method="post">
+                <div class="subscribtion-form__field fild-with-button fild-with-button--medium">
+                  <div class="fild-with-button__wrapper">
+                    <label class="fild-with-button__label">
+                      <span class="visually-hidden">Введите email</span>
+                      <input class="fild-with-button__input" placeholder="example@mail.ru" name="subscribtion" type="email" required data-pristine-required-message="Обязательное поле" data-pristine-email-message="Введите валидный email">
+                      <svg width="20" height="20" aria-hidden="true" focusable="false">
+                        <use xlink:href="img/sprite.svg#loupe"></use>
+                      </svg>
+                    </label>
+                    <button class="fild-with-button__button" type="submit">Подписаться</button>
+                  </div>
+                </div>
             </form>
+            <p class="subscribtion__agreement agreement agreement--modified">Нажимая кнопку “Подписаться”, Вы соглашаетесь с <a class="agreement__link" href="#">политикой конфиденциальности.</a></p>
           </div>
 
           <div class="footer__footer-nav-wrapper">
             <nav class="footer__footer-nav footer-nav">
-              <ul class="footer-nav__list footer-nav__list--menu">
+              <ul class="footer-nav__list footer-nav__list--main-menu">
                 <li class="footer-nav__item">
                   <a class="footer-nav__link" href="#">Каталог</a>
                 </li>
@@ -565,6 +576,9 @@
                 <li class="footer-nav__item">
                   <a class="footer-nav__link" href="#">Новости</a>
                 </li>
+              </ul>
+
+              <ul class="footer-nav__list footer-nav__list--info">
                 <li class="footer-nav__item">
                   <a class="footer-nav__link" href="#">Оплата и доставка</a>
                 </li>
@@ -594,29 +608,29 @@
                 </li>
               </ul>
             </nav>
+          </div>
 
-            <div class="footer-nav__low-list-wrapper">
-              <ul class="footer-nav__low-list low-list">
-                <li class="low-list__item">
-                  <a class="low-list__link" href="#">© All rights reserved</a>
-                </li>
-                <li class="low-list__item">
-                  <a class="low-list__link" href="#">Публичная оферта</a>
-                </li>
-                <li class="low-list__item">
-                  <a class="low-list__link" href="#">Политика конфиденциальности</a>
-                </li>
-                <li class="low-list__item low-list__item--modified">
-                  <a class="low-list__link" href="#">
-                    Сделано в студии
-                    <svg width="21" height="21" aria-hidden="true" focusable="false">
-                      <use xlink:href="img/sprite.svg#5corners"></use>
-                    </svg>
-                    <span class="low-list__studio">5 УГЛОВ</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <div class="footer__low-list low-list">
+            <ul class="low-list__list">
+              <li class="low-list__item">
+                <a class="low-list__link" href="#">© All rights reserved</a>
+              </li>
+              <li class="low-list__item">
+                <a class="low-list__link" href="#">Публичная оферта</a>
+              </li>
+              <li class="low-list__item">
+                <a class="low-list__link" href="#">Политика конфиденциальности</a>
+              </li>
+              <li class="low-list__item low-list__item--modified">
+                <a class="low-list__link low-list__link" href="#">
+                  Сделано в студии
+                  <svg width="21" height="21" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite.svg#5corners"></use>
+                  </svg>
+                  <span class="low-list__studio">5 УГЛОВ</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </footer>
@@ -624,6 +638,7 @@
 
     <script src="https://api-maps.yandex.ru/2.1/?apikey=1e0a75b3-33eb-44ea-adfc-342ae40b9b41&lang=ru_RU"></script>
     <script src="https://unpkg.com/@dubaua/get-declension@1.0.2/dist/get-declension.min.umd.js"></script>
+    <script src="pristine/pristine.min.js"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

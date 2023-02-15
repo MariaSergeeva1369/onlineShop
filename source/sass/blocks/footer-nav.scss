@@ -1,0 +1,37 @@
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 116px;
+  justify-content: end;
+
+  @include vp-1023 {
+    justify-content: start;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.footer-nav__list {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 15px;
+  width: fit-content;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.footer-nav__link {
+  @include hover-focus {
+    text-decoration-line: underline;
+    outline: none;
+  }
+}

@@ -62,6 +62,7 @@
   },
   "dependencies": {
     "@dubaua/get-declension": "^1.0.2",
-    "dadata-suggestions": "^1.1.1"
+    "dadata-suggestions": "^1.1.1",
+    "pristinejs": "^0.1.9"
   }
 }

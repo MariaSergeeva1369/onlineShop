@@ -68,7 +68,7 @@
 .storage__runner-input[type="checkbox"]:checked + .storage__runner {
   &::after {
     top: 28%;
-    right: 0px;
+    right: 0;
     background: $color-default-black;
     transition: 0.3s;
 

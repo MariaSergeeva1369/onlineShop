@@ -1,0 +1,44 @@
+.footer {
+  border-top: 0.5px solid $color-light-gray;
+}
+
+.footer__wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 100px;
+  position: relative;
+
+  @include vp-1023 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  @include vp-767 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.footer__up-button {
+  position: absolute;
+  top: -50px;
+  right: 32px;
+}
+
+.footer__subscribtion {
+  max-width: 416px;
+
+  @include vp-1023 {
+    max-width: 100%;
+  }
+}
+
+.footer__low-list {
+  grid-area: 2 / 1 / 3 / -1;
+}

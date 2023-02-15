@@ -7,21 +7,3 @@
     gap: 12px;
   }
 }
-
-.checkout__agreement {
-  margin: 0;
-  color: $color-dim-gray;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-}
-
-.checkout__agreement-link {
-  text-decoration-line: underline;
-  cursor: pointer;
-  color: $color-dim-gray;
-
-  @include hover-focus {
-    color: $color-default-black;
-  }
-}

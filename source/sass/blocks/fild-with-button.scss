@@ -1,0 +1,138 @@
+.fild-with-button__wrapper {
+  position: relative;
+}
+
+.fild-with-button__label {
+  position: relative;
+}
+
+.fild-with-button__input {
+  padding: 15px 50px 15px 20px;
+  width: 100%;
+  border: 1px solid $color-light-gray;
+  font-size: 16px;
+  line-height: 21px;
+  color: $color-default-black;
+  outline: none;
+  transition: 0.3s;
+  max-height: 51px;
+
+  @include vp-767 {
+    max-height: 45px;
+    padding: 12px 50px 12px 16px;
+  }
+
+  @include hover-focus {
+    border: 1px solid $color-dim-gray;
+    outline: none;
+    transition: 0.3s;
+  }
+}
+
+.fild-with-button__input:focus,
+.fild-with-button:focus-within .fild-with-button__input {
+  padding-right: 120px;
+}
+
+.fild-with-button--medium .fild-with-button__input:focus,
+.fild-with-button--medium:focus-within .fild-with-button__input {
+  padding-right: 160px;
+}
+
+.fild-with-button--big .fild-with-button__input:focus,
+.fild-with-button--big:focus-within .fild-with-button__input {
+  padding-right: 200px;
+}
+
+.fild-with-button__input:not(:placeholder-shown) {
+  border: 1px solid $color-dim-gray;
+  transition: 0.3s;
+}
+
+.fild-with-button__label svg {
+  background-color: $color-default-white;
+  stroke: $color-default-black;
+  position: absolute;
+  right: 20px;
+  top: -3px;
+}
+
+.fild-with-button:focus-within svg {
+  right: 135px;
+  top: -3px;
+}
+
+.fild-with-button--big svg,
+.fild-with-button--big:focus-within svg {
+  top: 28%;
+
+  @include vp-767 {
+    top: 35%;
+  }
+}
+
+.fild-with-button--big:focus-within svg {
+  right: 173px;
+}
+
+.fild-with-button__button {
+  display: none;
+  position: absolute;
+  top: 25%;
+  right: 16px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  border: none;
+  cursor: pointer;
+  background-color: $color-default-white;
+
+  @include hover-focus {
+    text-decoration-line: underline;
+    outline: none;
+  }
+}
+
+.fild-with-button--big .fild-with-button__button {
+  @include vp-767 {
+    top: 32%;
+  }
+}
+
+.fild-with-button__message {
+  display: none;
+  padding-left: 16px;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 4px;
+}
+
+.fild-with-button .fild-with-button__message--valid {
+  display: block;
+  color: $color-green;
+}
+
+.fild-with-button .fild-with-button__message--invalid {
+  display: block;
+  color: $color-torch-red;
+}
+
+.fild-with-button:focus-within .fild-with-button__button {
+  display: block;
+}
+
+.fild-with-button__error-message {
+  margin: 4px 0 0 16px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #d92c2c;
+}
+
+.fild-with-button--invalid .fild-with-button__input {
+  border: 1px solid #d92c2c;
+  transition: 0.3s;
+
+  @include hover-focus {
+    border: 1px solid #d92c2c;
+  }
+}

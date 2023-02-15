@@ -12,7 +12,7 @@ const products = [
     price: 12000,
     discount: 2000,
     count: 2,
-    size: [{
+    sizeList: [{
       value: 'XS',
       availible: true,
       checked: false,
@@ -37,7 +37,7 @@ const products = [
       availible: true,
       checked: false,
     }],
-    color: [{
+    colorList: [{
       name: 'Черный',
       value: 'black',
       color: '#444444',
@@ -70,7 +70,7 @@ const products = [
     price: 500,
     discount: 0,
     count: 1,
-    size: [{
+    sizeList: [{
       value: 'XS',
       availible: true,
       checked: false,
@@ -95,7 +95,7 @@ const products = [
       availible: false,
       checked: false,
     }],
-    color: [{
+    colorList: [{
       name: 'Черный',
       value: 'black',
       color: '#444444',
@@ -116,7 +116,7 @@ const products = [
     price: 500,
     discount: 0,
     count: 1,
-    size: [{
+    sizeList: [{
       value: 'XS',
       availible: true,
       checked: false,
@@ -141,15 +141,15 @@ const products = [
       availible: false,
       checked: false,
     }],
-    color: [{
+    colorList: [{
       name: 'Черный',
       value: 'black',
       color: '#444444',
       checked: true,
     }],
     deleted: false,
-  },
-]
+  }
+];
 
 
 const promocodes = [
@@ -162,7 +162,7 @@ const promocodes = [
     name: '123456',
     value: 1000,
     applied: false,
-  },
-]
+  }
+];
 
 export {products, promocodes};

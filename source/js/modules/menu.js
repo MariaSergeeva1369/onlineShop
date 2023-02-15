@@ -20,8 +20,8 @@ const unlockFocusScroll = () => {
 };
 
 const closeMenu = () => {
-  mainNav.classList.remove('main-nav__list--opened');
-  mainNav.classList.add('main-nav__list--closed');
+  mainNav.classList.remove('main-nav--opened');
+  mainNav.classList.add('main-nav--closed');
   unlockFocusScroll();
   mainElement.removeEventListener('click', closeMenu);
 };
@@ -37,7 +37,7 @@ const closeMenulOnEscape = (evt) => {
 const applySettings = () => {
   const textContainer = mainNav.querySelector('span');
 
-  if (mainNav.classList.contains('main-nav__list--opened')) {
+  if (mainNav.classList.contains('main-nav--opened')) {
     lockFocusScroll();
     document.addEventListener('keydown', closeMenulOnEscape);
     mainElement.addEventListener('click', closeMenu);
@@ -55,8 +55,8 @@ const menuHandler = () => {
     const button = mainNav.querySelector('button');
     button.setAttribute('tabIndex', 2);
 
-    mainNav.classList.toggle('main-nav__list--opened');
-    mainNav.classList.toggle('main-nav__list--closed');
+    mainNav.classList.toggle('main-nav--opened');
+    mainNav.classList.toggle('main-nav--closed');
 
     applySettings();
   }

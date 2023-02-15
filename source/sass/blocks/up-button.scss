@@ -1,0 +1,26 @@
+.up-button__button {
+  line-height: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid $color-light-gray;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: 0.3s;
+
+  @include hover-focus {
+    border-color: $color-dim-gray;
+    outline: none;
+    transition: 0.3s;
+  }
+}
+
+.up-button__button svg {
+  transition: 0.3s;
+  fill: $color-light-gray;
+}
+
+.up-button__button:focus svg,
+.up-button__button:hover svg {
+  transition: 0.3s;
+  fill: $color-dim-gray;
+}

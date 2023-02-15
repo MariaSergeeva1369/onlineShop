@@ -1,0 +1,35 @@
+.low-list__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 10px 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+}
+
+.low-list__link {
+  display: flex;
+  gap: 10px;
+  color: $color-dim-gray;
+
+  @include hover-focus {
+    text-decoration-line: underline;
+    outline: none;
+  }
+}
+
+.low-list__item--modified .low-list__link {
+  color: $color-default-black;
+}

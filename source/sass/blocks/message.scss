@@ -1,0 +1,37 @@
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+.message__main-text {
+  font-size: 40px;
+  line-height: 42px;
+  margin: 0 0 30px;
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+
+.message__text {
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 0 10px;
+  color: $color-dim-gray;
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.message__link {
+  @include hover-focus {
+    text-decoration-line: underline;
+  }
+}
+
+.message__image {
+  align-self: center;
+}
