@@ -1329,6 +1329,7 @@ button,
   -ms-flex-pack: center;
   justify-content: center;
   padding-right: 2px;
+  max-width: 100px;
 }
 
 .price-section__price-wrapper {

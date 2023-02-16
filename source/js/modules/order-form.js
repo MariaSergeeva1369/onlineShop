@@ -91,6 +91,7 @@ const getErrorAddressMessage = () => {
     return 'Введите номер дома';
   }
 
+  return 'Введите корректный адрес';
 };
 
 pristine.addValidator(addressInput, validateAddressInput, getErrorAddressMessage);
@@ -100,13 +101,13 @@ form.addEventListener('submit', (evt) => {
   evt.preventDefault();
 
   const valid = pristine.validate();
-  const prodacts = generateProductArrForOrder();
+  const products = generateProductArrForOrder();
   const promocodes = generatePromocodeArrForOrder();
   const price = generateOrderPriseData();
 
-  if (valid && prodacts.length) {
+  if (valid && products.length) {
     const formData = new FormData(evt.target);
-    formData.append('productList', JSON.stringify(prodacts));
+    formData.append('productList', JSON.stringify(products));
     formData.append('promocodeList', JSON.stringify(promocodes));
     formData.append('priceList', JSON.stringify(price));
 

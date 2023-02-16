@@ -3,7 +3,7 @@ import {initNav} from './modules/menu';
 import {initProdactListHandler, renderProductsInCart} from './modules/product-list';
 import {calculatePromocodeDiscount, applyPromocode} from './modules/promocode';
 import './modules/up-button';
-import './modules/form-validation';
+import './modules/order-form';
 import './modules/subscribtion-form-validation.js';
 import './modules/map';
 
