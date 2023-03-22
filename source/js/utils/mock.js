@@ -58,16 +58,16 @@ const products = [
     deleted: false,
   },
   {
-    name: 'Наименование товара',
+    name: 'Брюки спортивные Befree',
     image: {
-      jpg: './img/zolla.jpg',
-      jpg2x: './img/zolla@2x.jpg',
-      webp: './img/zolla.webp',
-      webp2x: './img/zolla@2x.webp',
+      jpg: './img/pants-befree.jpg',
+      jpg2x: './img/pants-befree@2x.jpg',
+      webp: './img/pants-befree.webp',
+      webp2x: './img/pants-befree@2x.webp',
     },
-    code: '891-257',
+    code: '990-287',
     season: 'Демисезон',
-    price: 500,
+    price: 2700,
     discount: 0,
     count: 1,
     sizeList: [{
@@ -78,12 +78,12 @@ const products = [
     {
       value: 'S',
       availible: true,
-      checked: true,
+      checked: false,
     },
     {
       value: 'M',
       availible: true,
-      checked: false,
+      checked: true,
     },
     {
       value: 'L',
@@ -99,7 +99,19 @@ const products = [
       name: 'Черный',
       value: 'black',
       color: '#444444',
+      checked: false,
+    },
+    {
+      name: 'Cерый',
+      value: 'gray',
+      color: '#c8c8c8',
       checked: true,
+    },
+    {
+      name: 'Зеленый',
+      value: 'green',
+      color: '#077345',
+      checked: false,
     }],
     deleted: true,
   },

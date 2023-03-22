@@ -74,6 +74,14 @@
   width: 130px;
   height: 160px;
 
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: calc((160 / 130) * 100%);
+  }
+
   @include vp-767 {
     max-width: 90px;
     height: auto;
@@ -83,7 +91,14 @@
 
 .product-card__img {
   display: block;
-  transition: 0.3s;
+  transition: transform 0.3s;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
 
   @include vp-767 {
     max-width: 90px;
@@ -91,7 +106,6 @@
 }
 
 .product-card__img:hover {
-  transition: 0.3s;
   transform: scale(1.25);
 }
 

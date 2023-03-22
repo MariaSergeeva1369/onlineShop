@@ -75,7 +75,11 @@ formatPhoneInput();
 // Валидация формы
 
 const validatePhoneInput = (value) => value.length >= MAX_PHONE_LENGTH;
-pristine.addValidator(phoneInput, validatePhoneInput, 'Введите номер полностью');
+
+if (pristine) {
+  pristine.addValidator(phoneInput, validatePhoneInput, 'Введите номер полностью');
+}
+
 
 const validateAddressInput = (value) => value.length >= MIN_ADDRESS_LENGTH && value.toLowerCase().match(/(?=.*[1-9])/g) && coordsInput.value;
 const getErrorAddressMessage = () => {

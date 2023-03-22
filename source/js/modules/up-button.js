@@ -1,4 +1,4 @@
-const button = document.querySelector('.up-button');
+const button = document.querySelector('.up-button__button');
 
 const scrollToTop = () => {
   window.scrollTo(0, 0);

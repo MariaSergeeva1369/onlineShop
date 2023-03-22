@@ -123,7 +123,7 @@ const createDeleteMessageString = ({name}) => `
 const createEmptyCartMessageString = () => `
   <div class="order__message message">
     <p class="message__main-text">Ваша корзина пуста =(</p>
-    <p class="message__text">Вернитесь в <a class="empty-cart-message__link" href="#">каталог</a></p>
+    <p class="message__text">Вернитесь в <a class="message__link" href="#">каталог</a></p>
     <div class="message__image">
       <svg width="240" height="240" aria-hidden="true" focusable="false">
         <use xlink:href="img/sprite.svg#empty-cart"></use>

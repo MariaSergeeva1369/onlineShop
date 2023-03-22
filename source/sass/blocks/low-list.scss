@@ -1,6 +1,6 @@
 .low-list__list {
   margin: 0;
-  padding: 0;
+  padding: 0 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -11,6 +11,11 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
+
+  @include vp-1023 {
+    padding: 0;
+    justify-content: left;
+  }
 
   @include vp-767 {
     flex-direction: column;
