@@ -2120,28 +2120,20 @@ button,
   width: 40px;
   height: 40px;
   border: 1px solid #c8c8c8;
+  color: #c8c8c8;
+  fill: currentColor;
   border-radius: 50%;
   background-color: transparent;
-  -webkit-transition: border-color 0.3s;
-  -o-transition: border-color 0.3s;
-  transition: border-color 0.3s;
+  -webkit-transition: border-color 0.3s, color 0.3s;
+  -o-transition: border-color 0.3s, color 0.3s;
+  transition: border-color 0.3s, color 0.3s;
+  cursor: pointer;
 }
 
 .up-button__button.focus-visible:focus {
   border-color: #6e6e6e;
+  color: #6e6e6e;
   outline: none;
-}
-
-.up-button__button svg {
-  -webkit-transition: fill 0.3s;
-  -o-transition: fill 0.3s;
-  transition: fill 0.3s;
-  fill: #c8c8c8;
-}
-
-.up-button__button:focus svg,
-.up-button__button:hover svg {
-  fill: #6e6e6e;
 }
 
 /* @mixin hover-focus {
@@ -2924,6 +2916,7 @@ button,
 
   .up-button__button:hover:not(.focus-visible) {
     border-color: #6e6e6e;
+    color: #6e6e6e;
     outline: none;
   }
 }

@@ -137,7 +137,7 @@ const createOrderFormedMessageString = () => `
     <p class="message__main-text">Спасибо =)</p>
     <p class="message__main-text">Ваш заказ успешно оформлен</p>
     <p class="message__text">Cкоро Вам позвонят для подтверждения заказа</p>
-    <p class="message__text">А пока вы можете посмотреть другие товары в <a class="empty-cart-message__link" href="#">каталоге</a></p>
+    <p class="message__text">А пока вы можете посмотреть другие товары в <a class="message__link" href="#">каталоге</a></p>
     <div class="message__image">
       <svg width="240" height="240" aria-hidden="true" focusable="false">
         <use xlink:href="img/sprite.svg#empty-cart"></use>

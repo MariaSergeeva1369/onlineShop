@@ -3,22 +3,18 @@
   width: 40px;
   height: 40px;
   border: 1px solid $color-light-gray;
+  color: $color-light-gray;
+  fill: currentColor;
   border-radius: 50%;
   background-color: transparent;
-  transition: border-color 0.3s;
+
+  transition: border-color 0.3s, color 0.3s;
+
+  cursor: pointer;
 
   @include hover-focus {
     border-color: $color-dim-gray;
+    color: $color-dim-gray;
     outline: none;
   }
-}
-
-.up-button__button svg {
-  transition: fill 0.3s;
-  fill: $color-light-gray;
-}
-
-.up-button__button:focus svg,
-.up-button__button:hover svg {
-  fill: $color-dim-gray;
 }

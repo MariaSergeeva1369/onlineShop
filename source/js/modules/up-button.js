@@ -5,3 +5,5 @@ const scrollToTop = () => {
 };
 
 button.addEventListener('click', scrollToTop);
+
+export {scrollToTop};

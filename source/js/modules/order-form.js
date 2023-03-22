@@ -1,6 +1,7 @@
 import {generateProductArrForOrder, generatePromocodeArrForOrder} from './generateOrderData';
 import {generateOrderPriseData, productsArr, renderProductsInCart, createMessageinCart} from './product-list';
 import {createOrderFormedMessageString} from './product-list-content';
+import {scrollToTop} from './up-button';
 
 const form = document.querySelector('.order__form');
 const phoneInput = form.querySelector('[name="phone"]');
@@ -125,6 +126,9 @@ form.addEventListener('submit', (evt) => {
     const formValue = Object.fromEntries(formData);
     // eslint-disable-next-line no-console
     console.log('Информация о заказе:', formValue);
+    scrollToTop();
+  } else {
+    form.scrollIntoView();
   }
 });
 
